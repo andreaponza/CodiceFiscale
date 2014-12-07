@@ -672,17 +672,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="322" height="270"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <comboBox verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NK7-Rj-AVV">
-                                <rect key="frame" x="20" y="87" width="58" height="26"/>
-                                <comboBoxCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" placeholderString="Prov." drawsBackground="YES" completes="NO" numberOfVisibleItems="5" id="ncW-1v-nS0">
-                                    <font key="font" metaFont="system"/>
-                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                </comboBoxCell>
-                                <connections>
-                                    <action selector="fillCityBox:" target="XfG-lQ-9wD" id="Jw1-Nc-aGC"/>
-                                </connections>
-                            </comboBox>
                             <comboBox verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="O5d-Dg-N2v">
                                 <rect key="frame" x="88" y="87" width="217" height="26"/>
                                 <comboBoxCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" enabled="NO" sendsActionOnEndEditing="YES" borderStyle="bezel" placeholderString="City" drawsBackground="YES" completes="NO" numberOfVisibleItems="5" id="ZzD-0I-LVK">
@@ -780,6 +769,17 @@
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
+                            <comboBox verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NK7-Rj-AVV">
+                                <rect key="frame" x="20" y="87" width="58" height="26"/>
+                                <comboBoxCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" placeholderString="Prov." drawsBackground="YES" completes="NO" numberOfVisibleItems="5" id="ncW-1v-nS0">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </comboBoxCell>
+                                <connections>
+                                    <action selector="fillCityBox:" target="XfG-lQ-9wD" id="Jw1-Nc-aGC"/>
+                                </connections>
+                            </comboBox>
                         </subviews>
                     </view>
                     <connections>
@@ -869,7 +869,7 @@
                 </viewController>
                 <customObject id="RbT-lI-RwS" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="536.5" y="638"/>
+            <point key="canvasLocation" x="515.5" y="638"/>
         </scene>
     </scenes>
     <resources>
