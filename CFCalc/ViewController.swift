@@ -26,6 +26,7 @@ class ViewController: NSViewController {
         super.viewDidLoad()
         
         //start fill provBox
+        cfTextField.selectable = true
         var comuni = ComuniXMLParser(fromFileAtPath: NSBundle.mainBundle().pathForResource("comuni", ofType: "xml"))
         comuni.start()
         comuniList = comuni.getParsedItems()

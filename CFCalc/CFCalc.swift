@@ -178,7 +178,7 @@ class CFCalc {
         code = code.stringByReplacingOccurrencesOfString(" ", withString: "")
         var val = 0
         
-        for var i = 0; i <= 14; i = i + 2 {                 //odd char
+        for var i = 0; i <= code.length-1; i = i + 2 {                 //odd char
             switch (code.substringWithRange(NSMakeRange(i, 1))) {
             case "0":
                 val = val + 1
@@ -292,7 +292,7 @@ class CFCalc {
                 val = val + 0
             }
         }
-        for var i = 1; i < 14; i = i + 2 {  //even char
+        for var i = 1; i < code.length-1; i = i + 2 {  //even char
             switch (code.substringWithRange(NSMakeRange(i, 1))) {
             case "0":
                 val = val + 0;
