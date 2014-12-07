@@ -1,6 +1,6 @@
-![Italy](https://raw.githubusercontent.com/andreaponza/CodiceFiscale/master/italia.png) CodiceFiscale
+CodiceFiscale
 =============
-
+<img height="150px" weight="150px" align="left" src="https://raw.githubusercontent.com/andreaponza/CodiceFiscale/master/italia.png" />
 Codice Fiscale swift osx<br>
 Calcola il codice fiscale italiano su mac<br>
 Scritto scritto in swift<br>
