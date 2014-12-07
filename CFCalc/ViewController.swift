@@ -42,6 +42,7 @@ class ViewController: NSViewController {
             }
         }
         provBox.addItemsWithObjectValues(provinceList)
+        provBox.removeItemWithObjectValue("EE")
         //end fill provBox
     }
 
@@ -57,37 +58,61 @@ class ViewController: NSViewController {
     
     //Fill city Box
     @IBAction func fillCityBox(sender: AnyObject) {
+        city()
+    }
+    
+    //City code
+    @IBAction func selectCityCode(sender: AnyObject) {
+        cityCodeFunc()
+    }
+    
+    //Italy foreing
+    @IBAction func italy(sender: AnyObject) {
+        provBox.enabled = true
+        provBox.selectItemAtIndex(1)
+        provBox.removeItemWithObjectValue("EE")
+        city()
+        cityCodeFunc()
+    }
+    @IBAction func foreing(sender: AnyObject) {
+        provBox.addItemWithObjectValue("EE")
+        provBox.selectItemWithObjectValue("EE")
+        city()
+        provBox.enabled = false
+        cityBox.enabled = true
+        cityBox.selectItemAtIndex(1)
+    }
+    //Function
+    func city(){
         cityBox.enabled = true
         cityCode = ""
         cityBox.removeAllItems()
         
         var comuniListString:[String] = []
         
-            for i in 0..<comuniList.count{
-                if(comuniList[i].provincia == provBox.selectedCell()?.stringValue){
-                    comuniListString.append(comuniList[i].comune)
-                    cityCodeList.append(comuniList[i].codice)
-                }
+        for i in 0..<comuniList.count{
+            if(comuniList[i].provincia == provBox.selectedCell()?.stringValue){
+                comuniListString.append(comuniList[i].comune)
+                cityCodeList.append(comuniList[i].codice)
             }
-            cityBox.addItemsWithObjectValues(comuniListString)
-            cityBox.selectItemAtIndex(0)
+        }
+        cityBox.addItemsWithObjectValues(comuniListString)
+        cityBox.selectItemAtIndex(0)
         
-            for i in 0..<comuniList.count{
-                if(comuniList[i].comune == cityBox.selectedCell()?.stringValue){
-                    cityCode = comuniList[i].codice
-                }
-            }
-    }
-    
-    //City code
-    @IBAction func selectCityCode(sender: AnyObject) {
         for i in 0..<comuniList.count{
             if(comuniList[i].comune == cityBox.selectedCell()?.stringValue){
-               cityCode = comuniList[i].codice
+                cityCode = comuniList[i].codice
             }
         }
     }
     
+    func cityCodeFunc(){
+        for i in 0..<comuniList.count{
+            if(comuniList[i].comune == cityBox.selectedCell()?.stringValue){
+                cityCode = comuniList[i].codice
+            }
+        }
+    }
    
 
 }

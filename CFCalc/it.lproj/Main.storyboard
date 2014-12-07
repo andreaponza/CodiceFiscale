@@ -685,7 +685,7 @@
                             </comboBox>
                             <comboBox verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="O5d-Dg-N2v">
                                 <rect key="frame" x="88" y="87" width="217" height="26"/>
-                                <comboBoxCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" enabled="NO" sendsActionOnEndEditing="YES" borderStyle="bezel" placeholderString="Comune" drawsBackground="YES" completes="NO" numberOfVisibleItems="5" id="ZzD-0I-LVK">
+                                <comboBoxCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" enabled="NO" sendsActionOnEndEditing="YES" borderStyle="bezel" placeholderString="Comune/Stato Estero" drawsBackground="YES" completes="NO" numberOfVisibleItems="5" id="ZzD-0I-LVK">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -780,6 +780,36 @@
                                     <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                 </datePickerCell>
                             </datePicker>
+                            <matrix verticalHuggingPriority="750" fixedFrame="YES" allowsEmptySelection="NO" autorecalculatesCellSize="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IyG-QQ-0cu">
+                                <rect key="frame" x="135" y="118" width="142" height="18"/>
+                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                <size key="cellSize" width="62" height="18"/>
+                                <size key="intercellSpacing" width="4" height="2"/>
+                                <buttonCell key="prototype" type="radio" title="Radio" imagePosition="left" alignment="left" inset="2" id="KyT-PS-UfH">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <cells>
+                                    <column>
+                                        <buttonCell type="radio" title="Italia" imagePosition="left" alignment="left" state="on" tag="1" inset="2" id="r9x-JX-6b9">
+                                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                            <connections>
+                                                <action selector="italy:" target="XfG-lQ-9wD" id="6MC-lo-6f4"/>
+                                            </connections>
+                                        </buttonCell>
+                                    </column>
+                                    <column>
+                                        <buttonCell type="radio" title="Estero" imagePosition="left" alignment="left" inset="2" id="odm-Zq-e3F">
+                                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                            <connections>
+                                                <action selector="foreing:" target="XfG-lQ-9wD" id="JdR-hr-QtL"/>
+                                            </connections>
+                                        </buttonCell>
+                                    </column>
+                                </cells>
+                            </matrix>
                         </subviews>
                     </view>
                     <connections>
