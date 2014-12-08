@@ -8,6 +8,9 @@
 
 import Cocoa
 
+
+
+
 class ViewController: NSViewController {
 
     @IBOutlet weak var nameBox: NSTextField!
@@ -17,6 +20,8 @@ class ViewController: NSViewController {
     @IBOutlet weak var provBox: NSComboBox!
     @IBOutlet weak var cityBox: NSComboBox!
     @IBOutlet weak var cfTextField: NSTextField!
+    
+    @IBOutlet weak var barCodeImage: NSImageView!
     
     var cityCodeList:[String] = []
     var cityCode:String = ""
@@ -53,6 +58,12 @@ class ViewController: NSViewController {
         
         
         cfTextField.stringValue = fiscalCode.calc(nameBox.stringValue, surname: surnameBox.stringValue, isFemale:femaleButton.state, bornDate:bornDateBox.dateValue, cityCode:cityCode)
+        //bar code
+        var error:NSError = NSError()
+        var writer:ZXMultiFormatWriter = ZXMultiFormatWriter.writer() as ZXMultiFormatWriter
+        var result:ZXBitMatrix = writer.encode(cfTextField.stringValue, format: kBarcodeFormatCode128, width: 282, height: 48, error: nil)
+        var image:NSImage = NSImage(CGImage: (ZXImage(matrix: result).cgimage), size: NSZeroSize)
+        barCodeImage.image = image
         
         }
     

@@ -669,11 +669,11 @@
             <objects>
                 <viewController id="XfG-lQ-9wD" customClass="ViewController" customModule="CFCalc" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="m2S-Jp-Qdl">
-                        <rect key="frame" x="0.0" y="0.0" width="322" height="270"/>
+                        <rect key="frame" x="0.0" y="0.0" width="322" height="344"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <comboBox verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="O5d-Dg-N2v">
-                                <rect key="frame" x="88" y="78" width="217" height="26"/>
+                                <rect key="frame" x="88" y="152" width="217" height="26"/>
                                 <comboBoxCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" enabled="NO" sendsActionOnEndEditing="YES" borderStyle="bezel" placeholderString="City/State" drawsBackground="YES" completes="NO" numberOfVisibleItems="5" id="ZzD-0I-LVK">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
@@ -684,7 +684,7 @@
                                 </connections>
                             </comboBox>
                             <matrix verticalHuggingPriority="750" fixedFrame="YES" allowsEmptySelection="NO" autorecalculatesCellSize="YES" translatesAutoresizingMaskIntoConstraints="NO" id="y76-cj-aG2">
-                                <rect key="frame" x="20" y="176" width="138" height="18"/>
+                                <rect key="frame" x="20" y="250" width="138" height="18"/>
                                 <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 <size key="cellSize" width="67" height="18"/>
                                 <size key="intercellSpacing" width="4" height="2"/>
@@ -708,7 +708,7 @@
                                 </cells>
                             </matrix>
                             <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PMy-0L-mhC">
-                                <rect key="frame" x="20" y="234" width="282" height="22"/>
+                                <rect key="frame" x="20" y="308" width="282" height="22"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="First Name" drawsBackground="YES" id="wo2-Zt-bfP">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
@@ -716,7 +716,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="URl-CS-KG8">
-                                <rect key="frame" x="20" y="202" width="282" height="22"/>
+                                <rect key="frame" x="20" y="276" width="282" height="22"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="Last Name" drawsBackground="YES" id="Fei-Zf-E1z">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
@@ -724,7 +724,7 @@
                                 </textFieldCell>
                             </textField>
                             <datePicker verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VIY-IO-Q6A">
-                                <rect key="frame" x="91" y="145" width="96" height="27"/>
+                                <rect key="frame" x="91" y="219" width="96" height="27"/>
                                 <datePickerCell key="cell" borderStyle="bezel" alignment="left" id="1RA-qp-yGw">
                                     <font key="font" metaFont="system"/>
                                     <calendarDate key="date" timeIntervalSinceReferenceDate="-595929600" calendarFormat="%Y-%m-%d %H:%M:%S %z">
@@ -736,7 +736,7 @@
                                 </datePickerCell>
                             </datePicker>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lpA-13-5aU">
-                                <rect key="frame" x="18" y="148" width="75" height="17"/>
+                                <rect key="frame" x="18" y="222" width="75" height="17"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Born date:" id="mxT-VB-8Lk">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -744,7 +744,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LvI-Ni-Tn0">
-                                <rect key="frame" x="18" y="118" width="75" height="17"/>
+                                <rect key="frame" x="18" y="192" width="75" height="17"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Born place:" id="BwZ-QE-pha">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -752,7 +752,7 @@
                                 </textFieldCell>
                             </textField>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4en-iA-QFJ">
-                                <rect key="frame" x="20" y="44" width="282" height="19"/>
+                                <rect key="frame" x="20" y="118" width="282" height="19"/>
                                 <buttonCell key="cell" type="roundRect" title="Calcolate" bezelStyle="roundedRect" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="ATf-yJ-4p2">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="cellTitle"/>
@@ -770,7 +770,7 @@
                                 </textFieldCell>
                             </textField>
                             <comboBox verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NK7-Rj-AVV">
-                                <rect key="frame" x="20" y="78" width="58" height="26"/>
+                                <rect key="frame" x="20" y="152" width="58" height="26"/>
                                 <comboBoxCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" placeholderString="Prov." drawsBackground="YES" completes="NO" numberOfVisibleItems="5" id="ncW-1v-nS0">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
@@ -781,7 +781,7 @@
                                 </connections>
                             </comboBox>
                             <matrix verticalHuggingPriority="750" fixedFrame="YES" allowsEmptySelection="NO" autorecalculatesCellSize="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Q1y-pQ-TnN">
-                                <rect key="frame" x="99" y="117" width="142" height="18"/>
+                                <rect key="frame" x="99" y="191" width="142" height="18"/>
                                 <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 <size key="cellSize" width="69" height="18"/>
                                 <size key="intercellSpacing" width="4" height="2"/>
@@ -810,9 +810,14 @@
                                     </column>
                                 </cells>
                             </matrix>
+                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BgR-DT-njg">
+                                <rect key="frame" x="20" y="45" width="282" height="66"/>
+                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="61a-Fh-3X0"/>
+                            </imageView>
                         </subviews>
                     </view>
                     <connections>
+                        <outlet property="barCodeImage" destination="BgR-DT-njg" id="JgD-yl-CLy"/>
                         <outlet property="bornDateBox" destination="VIY-IO-Q6A" id="vqa-us-t6j"/>
                         <outlet property="cfTextField" destination="c24-Yu-TLg" id="vjP-sP-9ij"/>
                         <outlet property="cityBox" destination="O5d-Dg-N2v" id="R13-qt-t6d"/>
@@ -824,7 +829,7 @@
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-4" y="655"/>
+            <point key="canvasLocation" x="-4" y="692"/>
         </scene>
         <!--Result Controller-->
         <scene sceneID="5wJ-fQ-vBR">
