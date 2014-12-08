@@ -82,6 +82,7 @@
 /* Begin PBXFileReference section */
 		6553F1241A3240850077DF39 /* comuni.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; lineEnding = 0; path = comuni.xml; sourceTree = "<group>"; };
 		6553F1261A3249830077DF39 /* comuni.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = comuni.swift; sourceTree = "<group>"; };
+		659B64211A35B88300AAD126 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/Main.strings; sourceTree = "<group>"; };
 		65A2E15E1A35A63E008086AA /* ZXingObjC.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ZXingObjC.xcodeproj; path = "../software/ZXingObjC-master/ZXingObjC.xcodeproj"; sourceTree = "<group>"; };
 		65A2E1771A35A7B3008086AA /* ZXingObjC-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "ZXingObjC-Bridging-Header.h"; path = "CFCalc/ZXingObjC-Bridging-Header.h"; sourceTree = "<group>"; };
 		65A309741A2FA05A0079F9DB /* CFCalc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CFCalc.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -377,6 +378,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				65A309801A2FA05A0079F9DB /* Base */,
+				659B64211A35B88300AAD126 /* it */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
