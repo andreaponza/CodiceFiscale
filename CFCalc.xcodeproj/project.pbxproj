@@ -10,7 +10,6 @@
 		6553F1251A3240850077DF39 /* comuni.xml in Resources */ = {isa = PBXBuildFile; fileRef = 6553F1241A3240850077DF39 /* comuni.xml */; };
 		6553F1271A3249830077DF39 /* comuni.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6553F1261A3249830077DF39 /* comuni.swift */; };
 		65A2E1701A35A699008086AA /* libZXingObjC-osx.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 65A2E16B1A35A63F008086AA /* libZXingObjC-osx.a */; };
-		65A2E1711A35A69D008086AA /* ZXingObjC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65A2E16F1A35A63F008086AA /* ZXingObjC.framework */; };
 		65A3097A1A2FA05A0079F9DB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65A309791A2FA05A0079F9DB /* AppDelegate.swift */; };
 		65A3097C1A2FA05A0079F9DB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65A3097B1A2FA05A0079F9DB /* ViewController.swift */; };
 		65A3097E1A2FA05A0079F9DB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 65A3097D1A2FA05A0079F9DB /* Images.xcassets */; };
@@ -56,13 +55,6 @@
 			remoteGlobalIDString = 2540439E166ABA0A00E13304;
 			remoteInfo = "OS X Framework";
 		};
-		65A2E1721A35A6B0008086AA /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 65A2E15E1A35A63E008086AA /* ZXingObjC.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 2540439D166ABA0A00E13304;
-			remoteInfo = "OS X Framework";
-		};
 		65A2E1741A35A6B4008086AA /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 65A2E15E1A35A63E008086AA /* ZXingObjC.xcodeproj */;
@@ -103,7 +95,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				65A2E1711A35A69D008086AA /* ZXingObjC.framework in Frameworks */,
 				65A2E1701A35A699008086AA /* libZXingObjC-osx.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -206,7 +197,6 @@
 			);
 			dependencies = (
 				65A2E1751A35A6B4008086AA /* PBXTargetDependency */,
-				65A2E1731A35A6B0008086AA /* PBXTargetDependency */,
 			);
 			name = CFCalc;
 			productName = CFCalc;
@@ -356,11 +346,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		65A2E1731A35A6B0008086AA /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "OS X Framework";
-			targetProxy = 65A2E1721A35A6B0008086AA /* PBXContainerItemProxy */;
-		};
 		65A2E1751A35A6B4008086AA /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "ZXingObjC-osx";
@@ -474,6 +459,7 @@
 				INFOPLIST_FILE = CFCalc/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "CFCalc/ZXingObjC-Bridging-Header.h";
 			};
 			name = Debug;
@@ -487,6 +473,7 @@
 				INFOPLIST_FILE = CFCalc/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "CFCalc/ZXingObjC-Bridging-Header.h";
 			};
 			name = Release;
