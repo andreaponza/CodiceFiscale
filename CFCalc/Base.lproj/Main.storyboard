@@ -800,7 +800,7 @@
                             </matrix>
                             <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BgR-DT-njg">
                                 <rect key="frame" x="20" y="45" width="282" height="66"/>
-                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="61a-Fh-3X0"/>
+                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" imageFrameStyle="grayBezel" id="61a-Fh-3X0"/>
                             </imageView>
                             <datePicker verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VIY-IO-Q6A">
                                 <rect key="frame" x="148" y="219" width="96" height="27"/>
