@@ -814,6 +814,16 @@
                                     <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                 </datePickerCell>
                             </datePicker>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4ht-0N-X3H">
+                                <rect key="frame" x="242" y="18" width="30" height="19"/>
+                                <buttonCell key="cell" type="roundRect" title="📑" bezelStyle="roundedRect" imagePosition="overlaps" alignment="center" enabled="NO" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="gfO-7x-Y2g">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="cellTitle"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="copyPasteBoard:" target="XfG-lQ-9wD" id="pha-1D-Alm"/>
+                                </connections>
+                            </button>
                         </subviews>
                     </view>
                     <connections>
@@ -821,6 +831,7 @@
                         <outlet property="bornDateBox" destination="VIY-IO-Q6A" id="vqa-us-t6j"/>
                         <outlet property="cfTextField" destination="c24-Yu-TLg" id="vjP-sP-9ij"/>
                         <outlet property="cityBox" destination="O5d-Dg-N2v" id="R13-qt-t6d"/>
+                        <outlet property="copyPbButton" destination="4ht-0N-X3H" id="naJ-7R-b4s"/>
                         <outlet property="femaleButton" destination="gxt-SZ-URD" id="Od8-YU-jUP"/>
                         <outlet property="nameBox" destination="PMy-0L-mhC" id="8Ip-57-16l"/>
                         <outlet property="provBox" destination="NK7-Rj-AVV" id="WHZ-Qt-KeS"/>

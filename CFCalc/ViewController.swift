@@ -20,6 +20,7 @@ class ViewController: NSViewController {
     @IBOutlet weak var provBox: NSComboBox!
     @IBOutlet weak var cityBox: NSComboBox!
     @IBOutlet weak var cfTextField: NSTextField!
+    @IBOutlet weak var copyPbButton: NSButton!
     
     @IBOutlet weak var barCodeImage: NSImageView!
     
@@ -65,6 +66,7 @@ class ViewController: NSViewController {
         var image:NSImage = NSImage(CGImage: (ZXImage(matrix: result).cgimage), size: NSZeroSize)
         barCodeImage.image = image
         
+        copyPbButton.enabled = true
         }
     
     
@@ -126,6 +128,13 @@ class ViewController: NSViewController {
         }
     }
    
+    @IBAction func copyPasteBoard(sender: AnyObject) {
+        NSPasteboard.generalPasteboard().clearContents()
+        var pasteboardString:NSString = cfTextField.stringValue.stringByReplacingOccurrencesOfString(" ", withString: "", options: nil)
+        
+        NSPasteboard.generalPasteboard().setString(pasteboardString, forType: NSPasteboardTypeString)
+    }
+    
 
 }
 
