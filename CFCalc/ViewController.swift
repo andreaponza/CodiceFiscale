@@ -128,6 +128,7 @@ class ViewController: NSViewController {
         }
     }
    
+    //Copy to Pasteboard
     @IBAction func copyPasteBoard(sender: AnyObject) {
         NSPasteboard.generalPasteboard().clearContents()
         var pasteboardString:NSString = cfTextField.stringValue.stringByReplacingOccurrencesOfString(" ", withString: "", options: nil)
