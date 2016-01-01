@@ -1,0 +1,519 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		657FC61A1C36640600FD2338 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 657FC6191C36640600FD2338 /* AppDelegate.swift */; };
+		657FC61C1C36640600FD2338 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 657FC61B1C36640600FD2338 /* ViewController.swift */; };
+		657FC6211C36640600FD2338 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 657FC61F1C36640600FD2338 /* Main.storyboard */; };
+		657FC62C1C36640600FD2338 /* CodiceFiscaleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 657FC62B1C36640600FD2338 /* CodiceFiscaleTests.swift */; };
+		657FC6371C36640600FD2338 /* CodiceFiscaleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 657FC6361C36640600FD2338 /* CodiceFiscaleUITests.swift */; };
+		657FC6461C36644E00FD2338 /* CFCalc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 657FC6441C36644E00FD2338 /* CFCalc.swift */; };
+		657FC6471C36644E00FD2338 /* comuni.swift in Sources */ = {isa = PBXBuildFile; fileRef = 657FC6451C36644E00FD2338 /* comuni.swift */; };
+		657FC6491C36645C00FD2338 /* comuni.xml in Resources */ = {isa = PBXBuildFile; fileRef = 657FC6481C36645C00FD2338 /* comuni.xml */; };
+		657FC64B1C36646C00FD2338 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 657FC64A1C36646C00FD2338 /* Images.xcassets */; };
+		657FC64D1C3664B900FD2338 /* editor_clipboard_checkmark_done-512.png in Resources */ = {isa = PBXBuildFile; fileRef = 657FC64C1C3664B900FD2338 /* editor_clipboard_checkmark_done-512.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		657FC6281C36640600FD2338 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 657FC60E1C36640600FD2338 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 657FC6151C36640600FD2338;
+			remoteInfo = CodiceFiscale;
+		};
+		657FC6331C36640600FD2338 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 657FC60E1C36640600FD2338 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 657FC6151C36640600FD2338;
+			remoteInfo = CodiceFiscale;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		657FC6161C36640600FD2338 /* CodiceFiscale.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CodiceFiscale.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		657FC6191C36640600FD2338 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		657FC61B1C36640600FD2338 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		657FC6201C36640600FD2338 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		657FC6221C36640600FD2338 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		657FC6271C36640600FD2338 /* CodiceFiscaleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CodiceFiscaleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		657FC62B1C36640600FD2338 /* CodiceFiscaleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodiceFiscaleTests.swift; sourceTree = "<group>"; };
+		657FC62D1C36640600FD2338 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		657FC6321C36640600FD2338 /* CodiceFiscaleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CodiceFiscaleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		657FC6361C36640600FD2338 /* CodiceFiscaleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodiceFiscaleUITests.swift; sourceTree = "<group>"; };
+		657FC6381C36640600FD2338 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		657FC6441C36644E00FD2338 /* CFCalc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CFCalc.swift; sourceTree = "<group>"; };
+		657FC6451C36644E00FD2338 /* comuni.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = comuni.swift; sourceTree = "<group>"; };
+		657FC6481C36645C00FD2338 /* comuni.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = comuni.xml; sourceTree = "<group>"; };
+		657FC64A1C36646C00FD2338 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		657FC64C1C3664B900FD2338 /* editor_clipboard_checkmark_done-512.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "editor_clipboard_checkmark_done-512.png"; sourceTree = "<group>"; };
+		657FC64F1C36706100FD2338 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/Main.strings; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		657FC6131C36640600FD2338 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		657FC6241C36640600FD2338 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		657FC62F1C36640600FD2338 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		657FC60D1C36640600FD2338 = {
+			isa = PBXGroup;
+			children = (
+				657FC6181C36640600FD2338 /* CodiceFiscale */,
+				657FC62A1C36640600FD2338 /* CodiceFiscaleTests */,
+				657FC6351C36640600FD2338 /* CodiceFiscaleUITests */,
+				657FC6171C36640600FD2338 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		657FC6171C36640600FD2338 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				657FC6161C36640600FD2338 /* CodiceFiscale.app */,
+				657FC6271C36640600FD2338 /* CodiceFiscaleTests.xctest */,
+				657FC6321C36640600FD2338 /* CodiceFiscaleUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		657FC6181C36640600FD2338 /* CodiceFiscale */ = {
+			isa = PBXGroup;
+			children = (
+				657FC6191C36640600FD2338 /* AppDelegate.swift */,
+				657FC61B1C36640600FD2338 /* ViewController.swift */,
+				657FC6441C36644E00FD2338 /* CFCalc.swift */,
+				657FC6451C36644E00FD2338 /* comuni.swift */,
+				657FC64A1C36646C00FD2338 /* Images.xcassets */,
+				657FC6481C36645C00FD2338 /* comuni.xml */,
+				657FC64C1C3664B900FD2338 /* editor_clipboard_checkmark_done-512.png */,
+				657FC61F1C36640600FD2338 /* Main.storyboard */,
+				657FC6221C36640600FD2338 /* Info.plist */,
+			);
+			path = CodiceFiscale;
+			sourceTree = "<group>";
+		};
+		657FC62A1C36640600FD2338 /* CodiceFiscaleTests */ = {
+			isa = PBXGroup;
+			children = (
+				657FC62B1C36640600FD2338 /* CodiceFiscaleTests.swift */,
+				657FC62D1C36640600FD2338 /* Info.plist */,
+			);
+			path = CodiceFiscaleTests;
+			sourceTree = "<group>";
+		};
+		657FC6351C36640600FD2338 /* CodiceFiscaleUITests */ = {
+			isa = PBXGroup;
+			children = (
+				657FC6361C36640600FD2338 /* CodiceFiscaleUITests.swift */,
+				657FC6381C36640600FD2338 /* Info.plist */,
+			);
+			path = CodiceFiscaleUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		657FC6151C36640600FD2338 /* CodiceFiscale */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 657FC63B1C36640600FD2338 /* Build configuration list for PBXNativeTarget "CodiceFiscale" */;
+			buildPhases = (
+				657FC6121C36640600FD2338 /* Sources */,
+				657FC6131C36640600FD2338 /* Frameworks */,
+				657FC6141C36640600FD2338 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CodiceFiscale;
+			productName = CodiceFiscale;
+			productReference = 657FC6161C36640600FD2338 /* CodiceFiscale.app */;
+			productType = "com.apple.product-type.application";
+		};
+		657FC6261C36640600FD2338 /* CodiceFiscaleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 657FC63E1C36640600FD2338 /* Build configuration list for PBXNativeTarget "CodiceFiscaleTests" */;
+			buildPhases = (
+				657FC6231C36640600FD2338 /* Sources */,
+				657FC6241C36640600FD2338 /* Frameworks */,
+				657FC6251C36640600FD2338 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				657FC6291C36640600FD2338 /* PBXTargetDependency */,
+			);
+			name = CodiceFiscaleTests;
+			productName = CodiceFiscaleTests;
+			productReference = 657FC6271C36640600FD2338 /* CodiceFiscaleTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		657FC6311C36640600FD2338 /* CodiceFiscaleUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 657FC6411C36640600FD2338 /* Build configuration list for PBXNativeTarget "CodiceFiscaleUITests" */;
+			buildPhases = (
+				657FC62E1C36640600FD2338 /* Sources */,
+				657FC62F1C36640600FD2338 /* Frameworks */,
+				657FC6301C36640600FD2338 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				657FC6341C36640600FD2338 /* PBXTargetDependency */,
+			);
+			name = CodiceFiscaleUITests;
+			productName = CodiceFiscaleUITests;
+			productReference = 657FC6321C36640600FD2338 /* CodiceFiscaleUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		657FC60E1C36640600FD2338 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = Andrea;
+				TargetAttributes = {
+					657FC6151C36640600FD2338 = {
+						CreatedOnToolsVersion = 7.2;
+					};
+					657FC6261C36640600FD2338 = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = 657FC6151C36640600FD2338;
+					};
+					657FC6311C36640600FD2338 = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = 657FC6151C36640600FD2338;
+					};
+				};
+			};
+			buildConfigurationList = 657FC6111C36640600FD2338 /* Build configuration list for PBXProject "CodiceFiscale" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 657FC60D1C36640600FD2338;
+			productRefGroup = 657FC6171C36640600FD2338 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				657FC6151C36640600FD2338 /* CodiceFiscale */,
+				657FC6261C36640600FD2338 /* CodiceFiscaleTests */,
+				657FC6311C36640600FD2338 /* CodiceFiscaleUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		657FC6141C36640600FD2338 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				657FC6491C36645C00FD2338 /* comuni.xml in Resources */,
+				657FC64B1C36646C00FD2338 /* Images.xcassets in Resources */,
+				657FC64D1C3664B900FD2338 /* editor_clipboard_checkmark_done-512.png in Resources */,
+				657FC6211C36640600FD2338 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		657FC6251C36640600FD2338 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		657FC6301C36640600FD2338 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		657FC6121C36640600FD2338 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				657FC61C1C36640600FD2338 /* ViewController.swift in Sources */,
+				657FC61A1C36640600FD2338 /* AppDelegate.swift in Sources */,
+				657FC6471C36644E00FD2338 /* comuni.swift in Sources */,
+				657FC6461C36644E00FD2338 /* CFCalc.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		657FC6231C36640600FD2338 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				657FC62C1C36640600FD2338 /* CodiceFiscaleTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		657FC62E1C36640600FD2338 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				657FC6371C36640600FD2338 /* CodiceFiscaleUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		657FC6291C36640600FD2338 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 657FC6151C36640600FD2338 /* CodiceFiscale */;
+			targetProxy = 657FC6281C36640600FD2338 /* PBXContainerItemProxy */;
+		};
+		657FC6341C36640600FD2338 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 657FC6151C36640600FD2338 /* CodiceFiscale */;
+			targetProxy = 657FC6331C36640600FD2338 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		657FC61F1C36640600FD2338 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				657FC6201C36640600FD2338 /* Base */,
+				657FC64F1C36706100FD2338 /* it */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		657FC6391C36640600FD2338 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		657FC63A1C36640600FD2338 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		657FC63C1C36640600FD2338 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = CodiceFiscale/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = AndreaPonza.CodiceFiscale;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		657FC63D1C36640600FD2338 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = CodiceFiscale/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = AndreaPonza.CodiceFiscale;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		657FC63F1C36640600FD2338 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = CodiceFiscaleTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = AndreaPonza.CodiceFiscaleTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CodiceFiscale.app/Contents/MacOS/CodiceFiscale";
+			};
+			name = Debug;
+		};
+		657FC6401C36640600FD2338 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = CodiceFiscaleTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = AndreaPonza.CodiceFiscaleTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CodiceFiscale.app/Contents/MacOS/CodiceFiscale";
+			};
+			name = Release;
+		};
+		657FC6421C36640600FD2338 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = CodiceFiscaleUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = AndreaPonza.CodiceFiscaleUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = CodiceFiscale;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		657FC6431C36640600FD2338 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = CodiceFiscaleUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = AndreaPonza.CodiceFiscaleUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = CodiceFiscale;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		657FC6111C36640600FD2338 /* Build configuration list for PBXProject "CodiceFiscale" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				657FC6391C36640600FD2338 /* Debug */,
+				657FC63A1C36640600FD2338 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		657FC63B1C36640600FD2338 /* Build configuration list for PBXNativeTarget "CodiceFiscale" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				657FC63C1C36640600FD2338 /* Debug */,
+				657FC63D1C36640600FD2338 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		657FC63E1C36640600FD2338 /* Build configuration list for PBXNativeTarget "CodiceFiscaleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				657FC63F1C36640600FD2338 /* Debug */,
+				657FC6401C36640600FD2338 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		657FC6411C36640600FD2338 /* Build configuration list for PBXNativeTarget "CodiceFiscaleUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				657FC6421C36640600FD2338 /* Debug */,
+				657FC6431C36640600FD2338 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 657FC60E1C36640600FD2338 /* Project object */;
+}
