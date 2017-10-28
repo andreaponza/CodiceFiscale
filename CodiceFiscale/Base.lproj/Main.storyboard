@@ -1,8 +1,8 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
-        <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="9531"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="13196"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Application-->
@@ -95,6 +95,9 @@
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
                         <rect key="contentRect" x="196" y="240" width="480" height="270"/>
                         <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
+                        <connections>
+                            <outlet property="delegate" destination="B8D-0N-5wS" id="avY-Dg-HaO"/>
+                        </connections>
                     </window>
                     <connections>
                         <segue destination="XfG-lQ-9wD" kind="relationship" relationship="window.shadowedContentViewController" id="cq2-FE-JQM"/>
@@ -108,25 +111,24 @@
         <scene sceneID="hIz-AP-VOD">
             <objects>
                 <viewController title="CodiceFiscale" id="XfG-lQ-9wD" customClass="ViewController" customModule="CodiceFiscale" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" id="m2S-Jp-Qdl">
+                    <view key="view" autoresizesSubviews="NO" id="m2S-Jp-Qdl">
                         <rect key="frame" x="0.0" y="0.0" width="322" height="276"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <comboBox verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IVJ-d3-H6F">
-                                <rect key="frame" x="88" y="78" width="217" height="26"/>
-                                <comboBoxCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" enabled="NO" sendsActionOnEndEditing="YES" borderStyle="bezel" placeholderString="City/State" drawsBackground="YES" completes="NO" numberOfVisibleItems="5" id="ZNY-66-Fcd">
+                                <rect key="frame" x="99" y="78" width="206" height="26"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <comboBoxCell key="cell" scrollable="YES" lineBreakMode="clipping" enabled="NO" sendsActionOnEndEditing="YES" borderStyle="bezel" placeholderString="City/State" drawsBackground="YES" numberOfVisibleItems="5" id="ZNY-66-Fcd">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </comboBoxCell>
-                                <connections>
-                                    <action selector="selectCityCode:" target="XfG-lQ-9wD" id="AHV-Z7-GkC"/>
-                                </connections>
                             </comboBox>
                             <matrix verticalHuggingPriority="750" fixedFrame="YES" allowsEmptySelection="NO" autorecalculatesCellSize="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TOt-mi-kLq">
-                                <rect key="frame" x="20" y="176" width="252" height="18"/>
+                                <rect key="frame" x="20" y="176" width="178" height="18"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                <size key="cellSize" width="66" height="18"/>
+                                <size key="cellSize" width="89" height="18"/>
                                 <size key="intercellSpacing" width="0.0" height="2"/>
                                 <buttonCell key="prototype" type="radio" title="Radio" imagePosition="left" alignment="left" inset="2" id="Nh0-hv-Uaq">
                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
@@ -149,6 +151,7 @@
                             </matrix>
                             <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TTj-zj-xcl">
                                 <rect key="frame" x="20" y="234" width="282" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="First Name" drawsBackground="YES" id="u6w-P5-Shp">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
@@ -157,6 +160,7 @@
                             </textField>
                             <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fbu-7R-COw">
                                 <rect key="frame" x="20" y="202" width="282" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="Last Name" drawsBackground="YES" id="dFu-k9-UCa">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
@@ -165,6 +169,7 @@
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CLE-Zb-yAU">
                                 <rect key="frame" x="18" y="148" width="106" height="17"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Born date:" id="k1A-Ds-VtL">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -173,6 +178,7 @@
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CZe-Hf-LQs">
                                 <rect key="frame" x="18" y="118" width="124" height="17"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Born place:" id="Iat-gh-D9q">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -181,27 +187,18 @@
                             </textField>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="10o-Q1-RcJ">
                                 <rect key="frame" x="20" y="44" width="282" height="19"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="roundRect" title="Calcolate" bezelStyle="roundedRect" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="tXc-R6-oXV">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="cellTitle"/>
+                                    <connections>
+                                        <action selector="calcolate:" target="XfG-lQ-9wD" id="go4-Ae-zvb"/>
+                                    </connections>
                                 </buttonCell>
-                                <connections>
-                                    <action selector="calcolate:" target="XfG-lQ-9wD" id="PKy-nQ-tw1"/>
-                                </connections>
                             </button>
-                            <comboBox verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lLO-bf-pQs">
-                                <rect key="frame" x="20" y="78" width="58" height="26"/>
-                                <comboBoxCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" placeholderString="Prov." drawsBackground="YES" completes="NO" numberOfVisibleItems="5" id="7U9-zR-GcO">
-                                    <font key="font" metaFont="system"/>
-                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                </comboBoxCell>
-                                <connections>
-                                    <action selector="fillCityBox:" target="XfG-lQ-9wD" id="Sc7-Lp-Xfh"/>
-                                </connections>
-                            </comboBox>
                             <matrix verticalHuggingPriority="750" fixedFrame="YES" allowsEmptySelection="NO" autorecalculatesCellSize="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZFB-zh-9fS">
                                 <rect key="frame" x="148" y="118" width="154" height="18"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 <size key="cellSize" width="68" height="18"/>
                                 <size key="intercellSpacing" width="4" height="2"/>
@@ -215,7 +212,7 @@
                                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                             <font key="font" metaFont="system"/>
                                             <connections>
-                                                <action selector="italy:" target="XfG-lQ-9wD" id="ODd-nA-nci"/>
+                                                <action selector="italianButtonSelected:" target="XfG-lQ-9wD" id="GQ7-AF-jwC"/>
                                             </connections>
                                         </buttonCell>
                                     </column>
@@ -224,27 +221,31 @@
                                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                             <font key="font" metaFont="system"/>
                                             <connections>
-                                                <action selector="foreing:" target="XfG-lQ-9wD" id="j7m-AL-nkT"/>
+                                                <action selector="foreingButtonSelected:" target="XfG-lQ-9wD" id="gHz-kh-2iy"/>
                                             </connections>
                                         </buttonCell>
                                     </column>
                                 </cells>
                             </matrix>
                             <datePicker verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tpu-ym-sVF">
-                                <rect key="frame" x="148" y="145" width="96" height="27"/>
+                                <rect key="frame" x="148" y="145" width="139" height="27"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <datePickerCell key="cell" borderStyle="bezel" alignment="left" id="I6L-ua-RiR">
                                     <font key="font" metaFont="system"/>
-                                    <calendarDate key="date" timeIntervalSinceReferenceDate="-595929600" calendarFormat="%Y-%m-%d %H:%M:%S %z">
-                                        <!--1982-02-12 08:00:00 -0800-->
-                                        <timeZone key="timeZone" name="US/Pacific"/>
-                                    </calendarDate>
+                                    <date key="date" timeIntervalSinceReferenceDate="-595929600">
+                                        <!--1982-02-12 16:00:00 +0000-->
+                                    </date>
+                                    <date key="minDate" timeIntervalSinceReferenceDate="-3187296000">
+                                        <!--1900-01-01 00:00:00 +0000-->
+                                    </date>
                                     <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                                     <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                 </datePickerCell>
                             </datePicker>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="H2R-0I-sHf">
                                 <rect key="frame" x="18" y="20" width="286" height="17"/>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="XXX XXX XXXXX XXXXX" id="J2a-AZ-W2h">
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" sendsActionOnEndEditing="YES" alignment="center" id="J2a-AZ-W2h">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
@@ -252,26 +253,36 @@
                             </textField>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DyZ-oO-NE7">
                                 <rect key="frame" x="242" y="18" width="30" height="19"/>
-                                <buttonCell key="cell" type="roundRect" title="📑" bezelStyle="roundedRect" imagePosition="overlaps" alignment="center" enabled="NO" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="6VK-6I-J7R">
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="roundRect" title="📑" bezelStyle="roundedRect" imagePosition="overlaps" alignment="center" borderStyle="border" transparent="YES" imageScaling="proportionallyDown" inset="2" id="6VK-6I-J7R">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="cellTitle"/>
                                 </buttonCell>
-                                <connections>
-                                    <action selector="code2cliboard:" target="XfG-lQ-9wD" id="gkB-Ne-223"/>
-                                </connections>
                             </button>
+                            <comboBox verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YFL-3F-AWt">
+                                <rect key="frame" x="21" y="78" width="73" height="26"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <comboBoxCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" borderStyle="bezel" placeholderString="Prov." drawsBackground="YES" completes="NO" numberOfVisibleItems="4" id="PxD-d7-cX0">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </comboBoxCell>
+                                <connections>
+                                    <action selector="fillCityMenu:" target="XfG-lQ-9wD" id="Q2I-6r-8x1"/>
+                                </connections>
+                            </comboBox>
                         </subviews>
                     </view>
                     <connections>
-                        <outlet property="cityTextBox" destination="IVJ-d3-H6F" id="oId-lJ-ppm"/>
-                        <outlet property="dateTextBox" destination="tpu-ym-sVF" id="Oj8-aX-VKw"/>
-                        <outlet property="femaleButton" destination="WOQ-Ni-54t" id="6Xf-D9-2b5"/>
-                        <outlet property="fiscalCodeTextBox" destination="H2R-0I-sHf" id="MeI-Xh-Cw3"/>
-                        <outlet property="foreingButton" destination="oZS-49-uRC" id="iYs-Md-qsy"/>
-                        <outlet property="nameTextBox" destination="TTj-zj-xcl" id="qfx-l6-Lvy"/>
-                        <outlet property="pasteButton" destination="DyZ-oO-NE7" id="eIW-im-i5z"/>
-                        <outlet property="provTextBox" destination="lLO-bf-pQs" id="f8A-E9-Ujc"/>
-                        <outlet property="surnameTextBox" destination="fbu-7R-COw" id="iN7-Ka-6P7"/>
+                        <outlet property="cFTextBox" destination="H2R-0I-sHf" id="zv3-zh-fm9"/>
+                        <outlet property="cityMenu" destination="IVJ-d3-H6F" id="r8f-OV-odQ"/>
+                        <outlet property="dateBox" destination="tpu-ym-sVF" id="tyb-ae-0ou"/>
+                        <outlet property="femaleButton" destination="WOQ-Ni-54t" id="3tx-yk-xJK"/>
+                        <outlet property="foreingButton" destination="oZS-49-uRC" id="azT-tN-Pw6"/>
+                        <outlet property="italyButton" destination="Dgg-mB-Jxf" id="yy1-RB-9OV"/>
+                        <outlet property="nameBox" destination="TTj-zj-xcl" id="NFv-dI-VT4"/>
+                        <outlet property="provMenu" destination="YFL-3F-AWt" id="Nsi-7h-wkz"/>
+                        <outlet property="surnameBox" destination="fbu-7R-COw" id="4o5-7p-KbB"/>
                     </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>

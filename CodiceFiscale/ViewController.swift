@@ -8,126 +8,108 @@
 
 import Cocoa
 
-class ViewController: NSViewController {
+class ViewController: NSViewController, NSTextFieldDelegate, NSComboBoxDelegate {
 
-    @IBOutlet weak var nameTextBox: NSTextField!
-    @IBOutlet weak var surnameTextBox: NSTextField!
-    @IBOutlet weak var dateTextBox: NSDatePicker!
-    @IBOutlet weak var provTextBox: NSComboBox!
-    @IBOutlet weak var cityTextBox: NSComboBox!
-    @IBOutlet weak var femaleButton: NSButtonCell!
     @IBOutlet weak var foreingButton: NSButtonCell!
-    @IBOutlet weak var fiscalCodeTextBox: NSTextField!
-    @IBOutlet weak var pasteButton: NSButton!
+    @IBOutlet weak var italyButton: NSButtonCell!
+    @IBOutlet weak var nameBox: NSTextField!
+    @IBOutlet weak var surnameBox: NSTextField!
+    @IBOutlet weak var femaleButton: NSButtonCell!
+    @IBOutlet weak var dateBox: NSDatePicker!
+    @IBOutlet weak var cFTextBox: NSTextField!
+    @IBOutlet weak var cityMenu: NSComboBox!
+    @IBOutlet weak var provMenu: NSComboBox!
     
-    var cityCodeList:[String] = []
-    var cityCode:String = ""
-    var comuniList:[Comune] = []
+    let cfCalc = CFCalc()
     
     
     override func viewDidLoad() {
+        
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
-        fiscalCodeTextBox.selectable = true
-        let comuni = ComuniXMLParser(fromFileAtPath: NSBundle.mainBundle().pathForResource("comuni", ofType: "xml"))
-        comuni.start()
-        comuniList = comuni.getParsedItems()
-        var provinceList:[String] = []
-        
-        for i in 0..<comuniList.count{
-            if(i==0){
-                provinceList.append(comuni[i].provincia)
+        var temp = String()
+        for item in cfCalc.placeList() {
+            item.province.removeFirst()
+            if item.province != temp && item.province != "EE" {
+                provMenu.addItem(withObjectValue: item.province)
             }
-            else{
-                if(provinceList.last != comuni[i].provincia){
-                    provinceList.append(comuni[i].provincia)
-                }
-            }
+            temp = item.province
         }
-        provTextBox.addItemsWithObjectValues(provinceList)
-        cityTextBox.removeItemWithObjectValue("EE")
-        //end fill provBox
     }
-
-    override var representedObject: AnyObject? {
+    
+    override var representedObject: Any? {
         didSet {
-        // Update the view, if already loaded.
+            // Update the view, if already loaded.
         }
     }
-   
-    @IBAction func calcolate(sender: AnyObject) {
-        let fiscalCode:CFCalc = CFCalc()
+// My function
+    @IBAction func calcolate(_ sender: Any) {
+        var state = false
+        if femaleButton.state.rawValue != 0 {
+            state = true
+        }
+        if cityMenu.isEnabled {
+            cFTextBox.stringValue = cfCalc.CFCalc(name: nameBox.stringValue, surname: surnameBox.stringValue, female: state, date: dateBox.dateValue, province: provMenu.stringValue, city: cityMenu.stringValue)
+        }
         
-        
-        fiscalCodeTextBox.stringValue = fiscalCode.calc(nameTextBox.stringValue, surname: surnameTextBox.stringValue, isFemale:femaleButton.state, bornDate:dateTextBox.dateValue, cityCode:cityCode)
-        
-        pasteButton.enabled = true
     }
     
-    @IBAction func fillCityBox(sender: AnyObject) {
-        city()
-    }
-    
-    //City code
-    @IBAction func selectCityCode(sender: AnyObject) {
-        cityCodeFunc()
-    }
-    
-    //Italy foreing
-    @IBAction func italy(sender: AnyObject) {
-        provTextBox.enabled = true
-        provTextBox.selectItemAtIndex(0)
-        provTextBox.removeItemWithObjectValue("EE")
-        city()
-        cityCodeFunc()
-    }
-    @IBAction func foreing(sender: AnyObject) {
-        provTextBox.addItemWithObjectValue("EE")
-        provTextBox.selectItemWithObjectValue("EE")
-        city()
-        provTextBox.enabled = false
-        //provTextBox.enabled = true
-        provTextBox.selectItemAtIndex(98)
-    }
-    //Function
-    func city(){
-        cityTextBox.enabled = true
-        cityCode = ""
-        cityTextBox.removeAllItems()
-        
-        var comuniListString:[String] = []
-        
-        for i in 0..<comuniList.count{
-            if(comuniList[i].provincia == provTextBox.selectedCell()?.stringValue){
-                comuniListString.append(comuniList[i].comune)
-                cityCodeList.append(comuniList[i].codice)
+    @IBAction func fillCityMenu(_ sender: Any) {
+        cityMenu.removeAllItems()
+        for item in cfCalc.placeList(){
+            if item.province == provMenu.selectedCell()?.stringValue{
+                cityMenu.addItem(withObjectValue: item.city)
             }
         }
-        cityTextBox.addItemsWithObjectValues(comuniListString)
-        cityTextBox.selectItemAtIndex(0)
-        
-        for i in 0..<comuniList.count{
-            if(comuniList[i].comune == cityTextBox.selectedCell()?.stringValue){
-                cityCode = comuniList[i].codice
-            }
-        }
+        cityMenu.isEnabled = true
+        cityMenu.selectItem(at: 0)
     }
     
-    func cityCodeFunc(){
-        for i in 0..<comuniList.count{
-            if(comuniList[i].comune == cityTextBox.selectedCell()?.stringValue){
-                cityCode = comuniList[i].codice
+    @IBAction func foreingButtonSelected(_ sender: Any) {
+        provMenu.isEnabled = false
+        cityMenu.removeAllItems()
+        provMenu.removeAllItems()
+        provMenu.addItem(withObjectValue: "EE")
+        provMenu.selectItem(at: 0)
+        for item in cfCalc.placeList(){
+            if item.province == provMenu.selectedCell()?.stringValue{
+                cityMenu.addItem(withObjectValue: item.city)
             }
         }
+        cityMenu.isEnabled = true
+        cityMenu.selectItem(at: 0)
     }
-
-    @IBAction func code2cliboard(sender: AnyObject) {
-        NSPasteboard.generalPasteboard().clearContents()
-        let pasteboardString:NSString = fiscalCodeTextBox.stringValue.stringByReplacingOccurrencesOfString(" ", withString: "", options: [])
+    
+    @IBAction func italianButtonSelected(_ sender: Any){
+        provMenu.isEnabled = true
+        provMenu.removeAllItems()
+        cityMenu.removeAllItems()
+        var temp = String()
+        for item in cfCalc.placeList() {
+            if item.province != temp && item.province != "EE" {
+                provMenu.addItem(withObjectValue: item.province)
+            }
+            temp = item.province
+        }
+        provMenu.selectItem(at: 0)
         
-        NSPasteboard.generalPasteboard().setString(pasteboardString as String, forType: NSPasteboardTypeString)
+        for item in cfCalc.placeList(){
+            if item.province == provMenu.selectedCell()?.stringValue{
+                cityMenu.addItem(withObjectValue: item.city)
+            }
+        }
+        cityMenu.isEnabled = true
+        cityMenu.selectItem(at: 0)
     }
-
 }
+
+/*extension ViewController: NSControlTextEditingDelegate {
+    override func controlTextDidChange(_ notification: Notification) {
+        if let textField = notification.object as? NSTextField {
+            textField.stringValue.uppercased()
+        }
+    }
+}*/
+
+
 

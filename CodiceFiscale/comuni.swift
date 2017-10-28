@@ -1,122 +1,65 @@
 import Cocoa
 import Foundation
 
-//Comune Class
-
-class Comune: NSObject {
-    var provincia: String = ""
-    var comune: String = ""
-    var codice: String = ""
+class City{
+    var province = String()
+    var city = String()
+    var cityCode = String()
 }
 
-//ComuniXMLParser
-
-class ComuniXMLParser: NSObject, NSXMLParserDelegate {
+class ParserBase : NSObject, XMLParserDelegate  {
+    public var items = [City]()
+    var city = City()
+    var foundCharacters = ""
     
-    var XMLfile: NSInputStream
-    var parser: NSXMLParser
-    var currentItem: Comune?
-    var parsedItems: [Comune] = []                        // final result of parse is stored here
-    var currentString: String = ""
-    var storingCharacters = false
-    var startTime = NSTimeInterval()
-    var lastDuration = NSTimeInterval()
-    var done = true
-    
-    subscript(i: Int) -> Comune {                         // so we can index right into the array of results
-        return parsedItems[i]
-    }
-    
-    init(fromFileAtPath path: String!) {                // initialize with path to a valid XML file
-        XMLfile = NSInputStream(fileAtPath: path)!
-        parser = NSXMLParser(stream: XMLfile)
-        super.init()
-    }
-    
-    func getParsedItems() -> [Comune] {
-        return parsedItems
-    }
-    
-    func getLastDuration() -> NSTimeInterval {
-        return lastDuration
-    }
-    
-    func displayItems() {
-        for item in parsedItems {
-            print("Provincia: \(item.provincia) ")
-            print("Comune: \(item.comune) ")
-            print("Codice: \(item.codice)\n")
-            
-        }
-    }
-    
-    func start() {                                      // call after init with an XML file to begin parse
-        currentItem = nil
-        parsedItems = []
-        currentString = ""
-        readAndParse()
-    }
-    
-    func readAndParse() {
-        parser.delegate = self                          // make this object the delegate for the parser object
-        done = false
-        parser.parse()
-        
-        
-        
-    }
-    
-    func finishedCurrentItem() {
-        parsedItems.append(currentItem!)                // keep track of parsed Comune objects
-    }
-    
-    //NSXMLParserDelegate
-    
-    func parserDidStartDocument(parser: NSXMLParser) {
-        startTime = NSDate.timeIntervalSinceReferenceDate()     // simple timer hack
-    }
-    
-    func parserDidEndDocument(parser: NSXMLParser) {
-        done = true
-        lastDuration = NSDate.timeIntervalSinceReferenceDate() - startTime
-    }
-    
-    func parser(parser: NSXMLParser, didStartElement elementName: String, namespaceURI: String?, qualifiedName qName: String?, attributes attributeDict: [String : String]) {
+    func parser(_ parser: XMLParser, didStartElement elementName: String, namespaceURI: String?, qualifiedName qName: String?, attributes attributeDict: [String : String] = [:]) {
         if elementName == "item" {
-            currentItem = Comune()
+            let temp = City();
+            if let name = attributeDict["provincia"] {
+                temp.province = name;
             }
-        else if elementName == "provincia" || elementName == "comune" || elementName == "codice" {
-            currentString = ""
-            storingCharacters = true
-        }
-    }
-    
-    func parser(parser: NSXMLParser, didEndElement elementName: String, namespaceURI: String?, qualifiedName qName: String?) {
-        if let item = currentItem {
-            if elementName == "item" {
-                finishedCurrentItem()
-            } else if elementName == "provincia" {
-                item.provincia = currentString
-            } else if elementName == "comune" {
-                item.comune = currentString
-            } else if elementName == "codice" {
-                item.codice = currentString
+            if let city = attributeDict["comune"] {
+                temp.city = city;
             }
-            storingCharacters = false
+            if let codice = attributeDict["codice"] {
+                temp.cityCode = codice;
+            }
         }
     }
     
-    func parser(parser: NSXMLParser, foundCharacters string: String) {
-        if storingCharacters == true {
-            currentString += string
+    func parser(_ parser: XMLParser, foundCharacters string: String) {
+        foundCharacters += string
+    }
+    
+    func parser(_ parser: XMLParser, didEndElement elementName: String, namespaceURI: String?, qualifiedName qName: String?) {
+        
+        if elementName == "provincia" {
+            city.province = foundCharacters
         }
+        
+        if elementName == "comune" {
+            city.city = foundCharacters
+        }
+        
+        if elementName == "codice" {
+            city.cityCode = foundCharacters
+        }
+        
+        if elementName == "item" {
+            let tempItem = City()
+            tempItem.province = city.province
+            tempItem.city = city.city
+            tempItem.cityCode = city.cityCode
+            items.append(tempItem)
+        }
+        foundCharacters = ""
     }
     
-    func parser(parser: NSXMLParser, parseErrorOccurred parseError: NSError) {
-        print(parseError.localizedFailureReason)
-        print(parseError.localizedDescription)
-        //error handling
+    func parserDidEndDocument(_ parser: XMLParser) {
+        //print("Ok")
     }
     
-  
+    func itemList() -> Array<City>{
+        return self.items
+    }
 }
